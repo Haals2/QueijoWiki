@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8f8f8;
+    color:#333;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    height:80px;
+    background:#FFD54F;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 50px;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.Container-Logo h2{
+    font-size:30px;
+    color:#5D4037;
+}
+
+.Menu{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+.Menu a{
+    text-decoration:none;
+    color:#4E342E;
+    font-weight:600;
+    transition:.3s;
+}
+
+.Menu a:hover{
+    color:#fff;
+}
+
+.Container-MenuIcon .rightside{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+.Container-MenuIcon img{
+    width:30px;
+    transition:.3s;
+}
+
+.Container-MenuIcon img:hover{
+    transform:scale(1.15);
+}
+
+/* MAIN */
+
+main{
+    width:90%;
+    max-width:1400px;
+    margin:40px auto;
+}
+
+main h1{
+    text-align:center;
+    margin-bottom:40px;
+    color:#5D4037;
+    font-size:42px;
+}
+
+.leftside{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    line-height:1.8;
+    margin-bottom:40px;
+}
+
+.leftside p{
+    text-align:justify;
+}
+
+.Container-Hero{
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    margin: 40px 0;
+}
+
+.Container-Hero img{
+    width: 500px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.2);
+}
+
+.Container-Button{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin:40px 0;
+}
+
+.Container-Button button{
+    padding:14px 25px;
+    border:none;
+    border-radius:50px;
+    background:#F9A825;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:600;
+}
+
+.Container-Button button:hover{
+    transform:translateY(-5px);
+    background:#FFB300;
+    box-shadow:0 12px 25px rgba(249,168,37,.4);
+}
+
+/* IMAGEM */
+
+.Container-Imagem{
+    display:flex;
+    justify-content:center;
+    margin:40px 0;
+}
+
+.Container-Imagem img{
+    width:550px;
+    max-width:100%;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+    transition:.4s;
+}
+
+.Container-Imagem img:hover{
+    transform:scale(1.03);
+}
+
+
+#ButtonModal{
+    display:block;
+    margin:0 auto 60px;
+    padding:15px 40px;
+    background:#6D4C41;
+    color:white;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+}
+
+#ButtonModal:hover{
+    background:#5D4037;
+    transform:scale(1.05);
+}
+
+
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    animation:fade .3s;
+    z-index:999;
+}
+
+.modal-conteudo{
+    background:white;
+    width:700px;
+    max-width:90%;
+    padding:35px;
+    border-radius:18px;
+    animation:popup .35s;
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+}
+
+.modal-conteudo h2{
+    margin-bottom:20px;
+    color:#6D4C41;
+}
+
+.modal-conteudo p{
+    text-align:justify;
+    line-height:1.8;
+}
+
+#ButtonFechar{
+    margin-top:25px;
+    padding:12px 30px;
+    background:#E53935;
+    color:white;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#ButtonFechar:hover{
+    background:#C62828;
+}
+
+
+footer{
+    margin-top:80px;
+    background:#FFD54F;
+    padding:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    gap:15px;
+    color:#5D4037;
+}
+
+.Container-Logo2 img{
+    width:55px;
+}
+
+.copyrights{
+    font-weight:500;
+}
+
+
+@keyframes popup{
+    from{
+        transform:scale(.7);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+    height:auto;
+    padding:20px;
+    gap:20px;
+}
+
+.Menu{
+    gap:20px;
+}
+
+main h1{
+    font-size:32px;
+}
+
+.leftside{
+    padding:20px;
+}
+
+.Container-Button{
+    gap:10px;
+}
+
+.Container-Button button{
+    width:160px;
+}
+
+.modal-conteudo{
+    width:95%;
+}
+
+}
